@@ -52,7 +52,7 @@ ul {
     position: relative;
     z-index: 3;
     border: none;
-    background-color: red;
+    background-color: rgb(255, 42, 42);
     transition: all .4s ease;
 }
 
@@ -113,7 +113,7 @@ ul {
     left: 0;
     /* transition: all .5s; */
     z-index: 2;
-    background-color: red;
+    background-color: rgb(255, 42, 42);
 }
 
 .header-nav {
@@ -129,13 +129,16 @@ ul {
     text-align: center;
     transform: translate(-50%, -50%);
     font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .header-nav ul {
     margin-bottom: 20px;
 }
 
-
+.header-nav li {
+    margin-bottom: 2rem;
+}
 .nav-apply {
     margin-top: 40px;
     position: relative;
@@ -221,7 +224,7 @@ ul {
     }
 
     .header-nav {
-        top: 24%;
+        top: 26%;
         left: 50%;
     }
 

@@ -5,25 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon1.ico">
+    <link rel="icon" href="img/favicon1.ico">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>BBB</title>
 </head>
 
 <body>
+    <header id="header">
+        <h1 class="header-title"><a href="#"><img src="img/logo-r.svg" alt="BBB"></a></h1>
+        <div class="nav-wrapper">
+            <h1 class="header-title"><img src="img/logo-w.svg" alt="BBB"></h1>
+            <nav class="header-nav">
+                <div>
+                    <ul>
+                        <li><a href="#">BBBが選ばれる理由</a></li>
+                        <li><a href="#">受講生の声</a></li>
+                        <li><a href="#">スクールの概要</a></li>
+                    </ul>
+                    <div class="nav-apply">
+                        <button>無料体験に申し込む</button>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+        <button class="burger-btn">
+            <span class="bar bar_top"></span>
+            <span class="bar bar_mid"></span>
+            <span class="bar bar_bottom"></span>
+        </button>
+    </header>
     <main>
         <section class="main-visual">
-            <div class="visual-content">
-                <img src="" alt="">
-                <h2 class="visual-title">話して学ぼう！<br>
-                    BBB英会話スクール</h2>
-                <a href="#">無料体験はこちら</a>
-            </div>
             <div class="visual-img">
                 <div class="img-01"></div>
                 <div class="img-02"></div>
                 <div class="img-03"></div>
             </div>
+            <div class="visual-content">
+                <h2 class="visual-title">話して学ぼう！<br>
+                    BBB英会話スクール</h2>
+                <a class="visual-btn" href="#">
+                    無料体験はこちら
+                </a>
+            </div>
+            
         </section>
 
         <section class="reason">
@@ -101,7 +129,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jquery.inview.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

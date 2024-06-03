@@ -1,6 +1,10 @@
-// スクロールして表示領域に入ったらclass付与
 $(function () {
-    
+    $('.burger-btn').on('click', function () {
+        $('.burger-btn').toggleClass('close');
+        // $('.burger-btn.close').removeClass('close');
+        $('.nav-wrapper').toggleClass('fade');
+        $('body').toggleClass('noscroll');
+    });
 });
 
 

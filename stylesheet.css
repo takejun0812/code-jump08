@@ -29,8 +29,8 @@ ul {
 
 /* header */
 #header {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     height: 10rem;
 }
 
@@ -44,18 +44,24 @@ ul {
 }
 
 /* ハンバーガー */
+.burger-wrapper {
+    /* position: fixed; */
+    /* top: 0; */
+    /* right: 0; */
+}
+
 .burger-btn {
     display: block;
     width: 10rem;
-    height: 100%;
-    position: relative;
-    z-index: 3;
+    height: 10rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
     border: none;
     background-color: rgb(255, 42, 42);
     transition: all .4s ease;
-        position: fixed;
-        top: 0;
-        right:0;
+    /* position: sticky; */
 }
 
 .burger-btn:hover {
@@ -114,7 +120,7 @@ ul {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 4;
     background-color: rgb(255, 42, 42);
 }
 
@@ -178,6 +184,11 @@ ul {
 /* content */
 /* セクションを超えて使うやつ */
 
+.wrapper {
+    max-width: 860px;
+    margin: auto;
+}
+
 .section-title {
     font-size: 3.6rem;
     letter-spacing: 0.4rem;
@@ -199,6 +210,7 @@ ul {
 
 /* section:main-visual */
 .main-visual {
+    margin-top: -45px;
     position: relative;
 }
 
@@ -431,6 +443,104 @@ ul {
     transform: translateX(0);
 }
 
+/* section review */
+.review {
+    margin-top: 11.5rem;
+}
+
+
+.review-item {
+    display: flex;
+    transition: 1s;
+    opacity: 0;
+}
+
+.review-item.animated {
+    opacity: 1;
+}
+
+.review-img {
+    display: block;
+    position: relative;
+}
+
+
+
+.review-img img {
+    background-color: #ccc;
+    border-radius: 100%;
+    height: 12rem;
+    width: 12rem;
+}
+
+.review-img::after {
+    display: block;
+    position: absolute;
+    white-space: pre-wrap;
+    text-align: center;
+    top: 13rem;
+    left: 10px;
+    z-index: 3;
+    width: 10rem;
+    height: 10rem;
+}
+
+.review-text {
+    max-width: 51.6rem;
+    background-color: #e9f1fb;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin: 0 2.5rem;
+    position: relative;
+}
+
+.review-text-left::after {
+    content: "";
+    position: absolute;
+    bottom: 3rem;
+    left: -1rem;
+    width: 20px;
+    height: 20px;
+    background-color: #e9f1fb;
+    border-top: 2px solid #e9f1fb;
+    border-right: 2px solid #e9f1fb;
+    transform: rotate(-45deg);
+}
+
+.review-text-right::after {
+    content: "";
+    position: absolute;
+    bottom: 3rem;
+    right: -1rem;
+    width: 20px;
+    height: 20px;
+    background-color: #e9f1fb;
+    border-top: 2px solid #e9f1fb;
+    border-right: 2px solid #e9f1fb;
+    transform: rotate(45deg);
+}
+
+.review-img-top::after {
+    content: '⚪︎⚪︎⚪︎さん\A大学生';
+}
+
+.review-img-mid::after {
+    content: '⚪︎⚪︎⚪︎さん\A会社員';
+}
+
+.review-img-bottom::after {
+    content: '⚪︎⚪︎⚪︎さん\A自営業';
+}
+
+
+.review-mid {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 9rem 0;
+}
+
 @media screen and (max-width:900px) {
 
     /* header */
@@ -511,6 +621,10 @@ ul {
 
     /* .main-visual */
 
+    .main-visual {
+        margin-top: 0.2rem;
+    }
+
     .visual-img {
         margin: 0 0 0 auto;
         position: relative;
@@ -533,7 +647,7 @@ ul {
         position: static;
         z-index: 2;
         padding: 0 16px;
-        margin-top: 28px;
+        margin-top: 2px;
     }
 
     .visual-title {
@@ -633,4 +747,81 @@ ul {
     .show {
         transform: translateX(0);
     }
+
+    /* section review */
+.review {
+    margin-top: 7.5rem;
+}
+
+
+.review-item {
+    flex-flow: column-reverse;
+    transition: 1s;
+    opacity: 0;
+}
+
+
+.review-item.animated {
+    opacity: 1;
+}
+
+.review-img {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.review-img::after {
+    /* display: block;
+    position: absolute;
+    white-space: pre-wrap;
+    text-align: center; */
+    top: 13rem;
+    left: 36%;
+    z-index: 3;
+    width: 10rem;
+    height: 10rem;
+}
+
+.review-text {
+    max-width: 51.6rem;
+    background-color: #e9f1fb;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin: 0 2.5rem;
+    position: relative;
+}
+
+.review-text-left::after {
+    bottom: -1rem;
+    left: 48%;
+}
+
+.review-text-right::after {
+    bottom: -1rem;
+    right: 48%;
+}
+
+.review-img-top::after {
+    content: '⚪︎⚪︎⚪︎さん\A大学生';
+}
+
+.review-img-mid::after {
+    content: '⚪︎⚪︎⚪︎さん\A社会人';
+}
+
+.review-img-bottom::after {
+    content: '⚪︎⚪︎⚪︎さん\A自営業';
+}
+
+
+#review-mid {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 9rem 0;
+}
 }

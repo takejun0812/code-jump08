@@ -171,12 +171,11 @@ ul {
 /* メニューオープン時 */
 .nav-wrapper.fade {
     visibility: visible;
-    opacity: 0.4;
+    opacity: 1;
 }
 
 body.noscroll {
     overflow-y: hidden;
-    
 }
 
 
@@ -881,12 +880,15 @@ body.noscroll {
         margin-top: 7.5rem;
     }
 
+    .review-content {
+        margin-top: 2rem;
+    }
+
 
     .review-item {
         flex-flow: column-reverse;
         transition: 1s;
         opacity: 0;
-        
     }
 
 
@@ -915,7 +917,7 @@ body.noscroll {
         background-color: #e9f1fb;
         border-radius: 15px;
         font-size: 1.6rem;
-        padding: 1.6rem;
+        padding: 1.9rem;
         letter-spacing: 0.1rem;
         margin:auto;
         position: relative;
@@ -952,7 +954,7 @@ body.noscroll {
 
     /* overview */
     .overview {
-        margin-top: 11rem;
+        margin-top: 9rem;
     }
 
     .overview-items {
@@ -968,7 +970,7 @@ body.noscroll {
 
     /* apply  */
     .apply {
-        padding: 8rem 0;
+        margin: 8rem 0;
     }
     
     .apply h2 {

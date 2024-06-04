@@ -2,7 +2,7 @@ $(function () {
     $('.burger-btn').on('click', function () {
         $('.burger-btn').toggleClass('close');
         $('.nav-wrapper').toggleClass('fade');
-        $('body').toggleClass('noscroll');
+        // $('body').toggleClass('noscroll');
     });
 });
 
@@ -27,6 +27,7 @@ $(window).on('load scroll', function () {
             $(this).removeClass("show");
         }
     });
+});
 
     $(function () {
         $(".review-item").on("inview", function () {
@@ -44,6 +45,5 @@ $(window).on('load scroll', function () {
         return false;
     });
 
-});
 
 Resources

@@ -541,6 +541,80 @@ ul {
     margin: 9rem 0;
 }
 
+.overview {
+    margin-top: 14rem;
+    padding: 6rem 0;
+    background-image: url("./img/bg.gif");
+    animation: bgiLoop 8s linear infinite;
+    background-repeat: repeat;
+
+}
+
+
+@keyframes bgiLoop {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -700px 700px;
+    }
+}
+
+.overview-items {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    column-gap: 3.2rem;
+    row-gap: 4rem;
+}
+
+.overview-item {
+    width: 48%;
+    padding: 5.5rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.overview-item h3 {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    text-align: center;
+    padding-bottom: 6.3rem;
+    position: relative;
+}
+
+.overview-item h3::after {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    font-size: 1.8rem;
+    width: 100%;
+    margin: auto;
+}
+
+.overview-item p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+}
+
+.overview-lesson h3::after {
+    content: "LESSON";
+}
+
+.overview-price h3::after {
+    content: "PRICE";
+}
+
+.overview-teacher h3::after {
+    content: "TEACHER";
+}
+
+.overview-qa h3::after {
+    content: "Q\026 A";
+}
+
 @media screen and (max-width:900px) {
 
     /* header */
@@ -603,6 +677,9 @@ ul {
     }
 
     /* 色々使えるやつ */
+    .wrapper {
+        padding: 0 1.6rem;
+    }
     .section-title {
         font-size: 2.8rem;
         letter-spacing: 0.4rem;
@@ -749,79 +826,137 @@ ul {
     }
 
     /* section review */
-.review {
-    margin-top: 7.5rem;
-}
+    .review {
+        margin-top: 7.5rem;
+    }
 
 
-.review-item {
-    flex-flow: column-reverse;
-    transition: 1s;
-    opacity: 0;
-}
+    .review-item {
+        flex-flow: column-reverse;
+        transition: 1s;
+        opacity: 0;
+    }
 
 
-.review-item.animated {
-    opacity: 1;
-}
+    .review-item.animated {
+        opacity: 1;
+    }
 
-.review-img {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    
-}
+    .review-img {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
 
-.review-img::after {
-    /* display: block;
+    }
+
+    .review-img::after {
+        /* display: block;
     position: absolute;
     white-space: pre-wrap;
     text-align: center; */
-    top: 13rem;
-    left: 36%;
-    z-index: 3;
-    width: 10rem;
-    height: 10rem;
-}
+        top: 13rem;
+        left: 36%;
+        z-index: 3;
+        width: 10rem;
+        height: 10rem;
+    }
 
-.review-text {
-    max-width: 51.6rem;
-    background-color: #e9f1fb;
-    border-radius: 15px;
-    font-size: 1.6rem;
-    padding: 1.6rem;
-    letter-spacing: 0.1rem;
-    margin: 0 2.5rem;
-    position: relative;
-}
+    .review-text {
+        max-width: 51.6rem;
+        background-color: #e9f1fb;
+        border-radius: 15px;
+        font-size: 1.6rem;
+        padding: 1.6rem;
+        letter-spacing: 0.1rem;
+        margin: 0 2.5rem;
+        position: relative;
+    }
 
-.review-text-left::after {
-    bottom: -1rem;
-    left: 48%;
-}
+    .review-text-left::after {
+        bottom: -1rem;
+        left: 48%;
+    }
 
-.review-text-right::after {
-    bottom: -1rem;
-    right: 48%;
-}
+    .review-text-right::after {
+        bottom: -1rem;
+        right: 48%;
+    }
 
-.review-img-top::after {
-    content: '⚪︎⚪︎⚪︎さん\A大学生';
-}
+    .review-img-top::after {
+        content: '⚪︎⚪︎⚪︎さん\A大学生';
+    }
 
-.review-img-mid::after {
-    content: '⚪︎⚪︎⚪︎さん\A社会人';
-}
+    .review-img-mid::after {
+        content: '⚪︎⚪︎⚪︎さん\A社会人';
+    }
 
-.review-img-bottom::after {
-    content: '⚪︎⚪︎⚪︎さん\A自営業';
-}
+    .review-img-bottom::after {
+        content: '⚪︎⚪︎⚪︎さん\A自営業';
+    }
 
 
-#review-mid {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 9rem 0;
-}
+    #review-mid {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 9rem 0;
+    }
+
+    .overview {
+        margin-top: 11rem;
+    }
+    
+    .overview-items {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        column-gap: 0;
+        row-gap: 3rem;
+    }
+    
+    .overview-item {
+        width: 100%;
+        padding: 3rem;
+        background-color: white;
+        border-radius: 20px;
+    }
+    
+    .overview-item h3 {
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+        text-align: center;
+        padding-bottom: 6.3rem;
+        position: relative;
+    }
+    
+    .overview-item h3::after {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        font-size: 1.8rem;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .overview-item p {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    .overview-lesson h3::after {
+        content: "LESSON";
+    }
+    
+    .overview-price h3::after {
+        content: "PRICE";
+    }
+    
+    .overview-teacher h3::after {
+        content: "TEACHER";
+    }
+    
+    .overview-qa h3::after {
+        content: "Q\026 A";
+    }
 }

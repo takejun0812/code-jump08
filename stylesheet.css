@@ -29,8 +29,6 @@ ul {
 
 /* header */
 #header {
-    /* display: flex;
-    justify-content: space-between; */
     height: 10rem;
 }
 
@@ -44,11 +42,11 @@ ul {
 }
 
 /* ハンバーガー */
-.burger-wrapper {
-    /* position: fixed; */
-    /* top: 0; */
-    /* right: 0; */
-}
+/* .burger-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+} */
 
 .burger-btn {
     display: block;
@@ -173,11 +171,12 @@ ul {
 /* メニューオープン時 */
 .nav-wrapper.fade {
     visibility: visible;
-    opacity: 1;
+    opacity: 0.4;
 }
 
-.noscroll {
-    overflow: hidden;
+body.noscroll {
+    overflow-y: hidden;
+    
 }
 
 
@@ -451,12 +450,16 @@ ul {
 
 .review-item {
     display: flex;
-    transition: 1s;
     opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+
 }
 
-.review-item.animated {
+.review-item.inview {
     opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
 }
 
 .review-img {
@@ -615,6 +618,53 @@ ul {
     content: "Q\026 A";
 }
 
+
+/* section apply */
+.apply {
+    padding: 12rem 0;
+}
+
+.apply h2 {
+    text-align: center;
+    font-size: 3.2rem;
+    position: relative;
+    margin-bottom: 6.0rem;
+    letter-spacing: 0.35rem;
+}
+
+.apply h2::after {
+    content: "今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント!";
+    font-size: 1.8rem;
+    letter-spacing: 0.18rem;
+    font-weight: normal;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    width: 100%;
+    margin: auto;
+}
+
+.apply a {
+    display: inline-block;
+    width: 100%;
+    padding: 1.5rem 0;
+    text-align: center;
+    background-color: rgb(255, 42, 42);
+    border: 3px solid rgb(255, 42, 42);
+    border-radius: 50px;
+    color: white;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.1rem;
+    transition: all .1s linear;
+}
+
+.apply a:hover {
+    color: rgb(255, 42, 42);
+    background-color: white;
+    border: 3px solid rgb(255, 42, 42);
+    transition: all .1s linear;
+}
 @media screen and (max-width:900px) {
 
     /* header */
@@ -680,6 +730,7 @@ ul {
     .wrapper {
         padding: 0 1.6rem;
     }
+
     .section-title {
         font-size: 2.8rem;
         letter-spacing: 0.4rem;
@@ -835,6 +886,7 @@ ul {
         flex-flow: column-reverse;
         transition: 1s;
         opacity: 0;
+        
     }
 
 
@@ -851,10 +903,6 @@ ul {
     }
 
     .review-img::after {
-        /* display: block;
-    position: absolute;
-    white-space: pre-wrap;
-    text-align: center; */
         top: 13rem;
         left: 36%;
         z-index: 3;
@@ -869,7 +917,7 @@ ul {
         font-size: 1.6rem;
         padding: 1.6rem;
         letter-spacing: 0.1rem;
-        margin: 0 2.5rem;
+        margin:auto;
         position: relative;
     }
 
@@ -902,61 +950,66 @@ ul {
         margin: 9rem 0;
     }
 
+    /* overview */
     .overview {
         margin-top: 11rem;
     }
-    
+
     .overview-items {
-        display: flex;
         width: 100%;
-        flex-wrap: wrap;
         column-gap: 0;
         row-gap: 3rem;
     }
-    
+
     .overview-item {
         width: 100%;
         padding: 3rem;
-        background-color: white;
-        border-radius: 20px;
+    }
+
+    /* apply  */
+    .apply {
+        padding: 8rem 0;
     }
     
-    .overview-item h3 {
-        font-size: 2.8rem;
-        line-height: 2.8rem;
+    .apply h2 {
         text-align: center;
-        padding-bottom: 6.3rem;
+        font-size: 2.4rem;
         position: relative;
+        margin-bottom: 9.3rem;
+        letter-spacing: 0.35rem;
     }
     
-    .overview-item h3::after {
-        position: absolute;
-        top: 3rem;
-        right: 0;
+    .apply h2::after {
+        content: "今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント!";
         font-size: 1.8rem;
+        letter-spacing: 0.18rem;
+        font-weight: normal;
+        position: absolute;
+        bottom: -5rem;
+        left: 0;
         width: 100%;
         margin: auto;
     }
     
-    .overview-item p {
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-        letter-spacing: 0.2rem;
+    .apply a {
+        display: inline-block;
+        width: 100%;
+        padding: 1.5rem 0;
+        text-align: center;
+        background-color: rgb(255, 42, 42);
+        border: 3px solid rgb(255, 42, 42);
+        border-radius: 50px;
+        color: white;
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.1rem;
+        transition: all .1s linear;
     }
     
-    .overview-lesson h3::after {
-        content: "LESSON";
-    }
-    
-    .overview-price h3::after {
-        content: "PRICE";
-    }
-    
-    .overview-teacher h3::after {
-        content: "TEACHER";
-    }
-    
-    .overview-qa h3::after {
-        content: "Q\026 A";
+    .apply a:hover {
+        color: rgb(255, 42, 42);
+        background-color: white;
+        border: 3px solid rgb(255, 42, 42);
+        transition: all .1s linear;
     }
 }

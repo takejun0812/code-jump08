@@ -1,11 +1,19 @@
 $(function () {
     $('.burger-btn').on('click', function () {
         $('.burger-btn').toggleClass('close');
-        // $('.burger-btn.close').removeClass('close');
         $('.nav-wrapper').toggleClass('fade');
         $('body').toggleClass('noscroll');
     });
 });
+
+$(function () {
+    $(".header-nav ul li a").on("click", function () {
+        // $(".header-nav ul").toggleClass();
+        $('.burger-btn.close').removeClass('close');
+        $('.nav-wrapper.fade').removeClass('fade');
+        $('body.noscroll').removeClass('noscroll');
+    })
+})
 
 let winHeight, winScroll, scrollPos;
 $(window).on('load scroll', function () {
@@ -20,22 +28,22 @@ $(window).on('load scroll', function () {
         }
     });
 
-    $(window).on('load scroll', function () {
-
-        var box = $('.review-item');
-        var animated = 'animated';
-
-        box.each(function () {
-
-            var boxOffset = $(this).offset().top;
-            var scrollPos = $(window).scrollTop();
-            var wh = $(window).height();
-
-            if (scrollPos > boxOffset - wh + 100) {
-                $(this).addClass(animated);
-            }
+    $(function () {
+        $(".review-item").on("inview", function () {
+            $(this).addClass("inview");
         });
     });
+
+    $('a[href^="#"]').click(function () {
+        // クリック時の処理
+        let href = $(this).attr('href');
+        // let target = $(href == "#" || href == "" ? 'html' : href);
+        let position = $(href).offset().top;
+        let speed = 1000;
+        $('html, body').animate({ scrollTop: position }, speed, "swing");
+        return false;
+    });
+
 });
 
 Resources

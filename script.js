@@ -29,21 +29,21 @@ $(window).on('load scroll', function () {
     });
 });
 
-    $(function () {
-        $(".review-item").on("inview", function () {
-            $(this).addClass("inview");
-        });
+$(function () {
+    $(".review-item").on("inview", function () {
+        $(this).addClass("inview");
     });
+});
 
-    $('a[href^="#"]').click(function () {
-        // クリック時の処理
-        let href = $(this).attr('href');
-        // let target = $(href == "#" || href == "" ? 'html' : href);
-        let position = $(href).offset().top;
-        let speed = 1000;
-        $('html, body').animate({ scrollTop: position }, speed, "swing");
-        return false;
-    });
+$('a[href^="#"]').click(function () {
+    // クリック時の処理
+    let href = $(this).attr('href');
+    // let target = $(href == "#" || href == "" ? 'html' : href);
+    let position = $(href).offset().top;
+    let speed = 1000;
+    $('html, body').animate({ scrollTop: position }, speed, "swing");
+    return false;
+});
 
 
 Resources

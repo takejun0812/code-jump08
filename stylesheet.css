@@ -175,7 +175,39 @@ ul {
     overflow: hidden;
 }
 
-@media screen and (max-width:375px) {
+/* footer */
+footer {
+    background-color: #e8e8e8;
+    padding-top: 6rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+}
+
+.footer-item {
+    width: 25%;
+}
+.footer-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.footer-item ul {
+    padding-left: 1rem;
+    font-size: 1.4rem;
+}
+
+.footer-company {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width:900px) {
 
     /* header */
     #header {
@@ -236,4 +268,18 @@ ul {
         margin-bottom: 2rem;
     }
 
+    /* footer */
+
+
+    .footer-content {
+        row-gap: 3rem;
+    }
+    
+    .footer-item {
+        width: 50%;
+    }
+    .footer-item h3 {
+        font-size: 1.5rem;
+    }
+    
 }

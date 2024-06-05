@@ -651,6 +651,42 @@ body.noscroll {
     transition: all .1s linear;
 }
 
+footer {
+    background-color: #e8e8e8;
+    padding-top: 5rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+}
+
+.footer-item {
+    width: 25%;
+}
+.footer-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-item ul {
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.footer-item li:hover {
+    opacity: 0.5;
+}
+
+.footer-company {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
 @media screen and (max-width:900px) {
 
     /* header */
@@ -995,5 +1031,18 @@ body.noscroll {
         background-color: white;
         border: 3px solid rgb(255, 42, 42);
         transition: all .1s linear;
+    }
+
+.footer-content {
+    row-gap: 3rem;
+}
+
+    .footer-item {
+        width: 50%;
+    }
+
+    .footer-item li {
+        line-height: 1.7rem;
+
     }
 }

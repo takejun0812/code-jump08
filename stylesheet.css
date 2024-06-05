@@ -917,17 +917,23 @@ footer {
 
     .review-img {
         margin-top: 3rem;
-        display: flex;
-        justify-content: center;
+        width: 100vw;
+        text-align: center;
+        /* display: flex;
+        justify-content: center; */
         position: relative;
 
     }
 
     .review-img::after {
+        display: block;
+        position: absolute;
+        white-space: pre-wrap;
+        text-align: center;
         top: 13rem;
-        left: 36%;
+        left: 0;
         z-index: 3;
-        width: 10rem;
+        width: 100vw;
         height: 10rem;
     }
 

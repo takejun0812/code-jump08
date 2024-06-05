@@ -673,6 +673,11 @@ footer {
 .footer-item ul {
     padding-left: 1rem;
     font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.footer-item li:hover {
+    opacity: 0.5;
 }
 
 .footer-company {
